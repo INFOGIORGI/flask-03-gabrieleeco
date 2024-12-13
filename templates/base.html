@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="it">
+    <head>
+        <title>{{titolo}}</title>
+    </head>
+
+    <body>
+        <nav>
+            <a href="{{url_for('home')}}">Home</a>
+            <a href="{{url_for('detail')}}">Dettagli</a>
+            {%block contenutoNavbar%}{%endblock%}
+        </nav>
+
+            {%block contenutoPagina%}{%endblock%}
+    </body>
+</html>

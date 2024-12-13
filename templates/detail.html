@@ -1,0 +1,26 @@
+{%extends 'base.html'%}
+
+{%block contenutoNavbar%}
+<a href="https://it.wikipedia.org/wiki/Pagina_principale">Wikipedia</a>
+{%endblock%}
+
+{%block contenutoPagina%}
+
+<table>
+    <tr>
+        <th>Nome prodotto</th>
+        <th>Scaffale</th>
+        <th>Prezzo</th>
+    </tr>
+    
+    {%for prodotto in prodotti%}
+    <tr>
+        <td>{{prodotto[0]}}</td>
+        <td><a href="{{url_for ('scaffale')}}">{{prodotto[1]}}</a></td>
+        <td>{{prodotto[2]}}</td>
+    </tr>
+    {%endfor%}
+    
+</table>
+
+{%endblock%}
